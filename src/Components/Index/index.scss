@@ -1,0 +1,77 @@
+@import "./../../common/scss/pure";
+
+.remind {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  .header {
+    background-color: $back-43689e;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: percent(1055);
+    height: percent(164, 865);
+    margin-top: percent(120, 1821);
+    @include border-r(percent(17, 1055), percent(17, 146));
+    h1 {
+      color: $font-fff;
+      font-size: 2.2em;
+      height: 100%;
+      width: percent(847, 1055);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .main {
+    height: percent(284, 865);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: percent(130, 1281);
+    .method {
+      width: percent(310);
+      height: percent(274, 284);
+      @include border-r(percent(6, 310), percent(6, 274));
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      cursor: pointer;
+      .method_content {
+        @include border-r(percent(6, 297), percent(6, 260));
+        width: percent(297, 310);
+        height: percent(260, 274);
+        text-align: center;
+        .title {
+          font-size: 2.4em;
+          font-weight: 900;
+          text-shadow: 0 4px rgba(0, 0, 0, .3);
+          margin-top: percent(10, 260);
+        }
+        .description {
+          font-size: 2em;
+          margin-top: percent(43, 260);
+        }
+      }
+    }
+    .method_1 {
+      .method_content {
+        background: url("method-1.png") center no-repeat;
+      }
+    }
+    .method_2 {
+      margin-left: percent(100);
+      .method_content {
+        background: url("method-2.png") center no-repeat;
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@mixin border-r($x, $y) {
+  border-top-left-radius: $x $y;
+  border-bottom-left-radius: $x $y;
+  border-top-right-radius: $x $y;
+  border-bottom-right-radius: $x $y;
+}
