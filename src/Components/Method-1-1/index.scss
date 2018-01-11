@@ -1,134 +1,178 @@
 @import "./../../common/scss/pure";
 
 .remind_1_1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
   bottom: 0;
-  .header {
-    color: $font-fff;
-    flex: 160;
-    display: flex;
+  .remind_content {
+    position: relative;
     width: 100%;
-    align-items: flex-end;
-    text-align: center;
-    .title {
-      width: percent(744, 1281);
-      height: percent(131, 160);
-      background-color: $back-43689e;
-      font-size: r(26);
-      font-weight: 600;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .header {
+      color: $font-fff;
+      height: percent(160, 865);
       display: flex;
-      justify-content: center;
-      align-items: center;
-      @include border-r(percent(17, 744), percent(17, 131));
-      margin-left: percent(269, 1281);
-      .title_content{
-        width: percent(652, 744);
-      }
-    }
-    .back_wrapper{
-      height: percent(131, 160);
-      width: percent(137, 1281);
-      margin-left: percent(81, 1281);
-      display: flex;
-      align-items: center;
-      .back_home{
-        width: 100%;
-        height: percent(101, 131);
-        background-color: #ffffff;
-        @include border-r(percent(15, 137), percent(15, 101));
-        font-size: r(40);
-        font-weight: 700;
-        cursor: pointer;
+      width: 100%;
+      align-items: flex-end;
+      text-align: center;
+      .title {
+        width: percent(744, 1281);
+        height: percent(131, 160);
+        background-color: $back-43689e;
+        font-size: r(26);
+        font-weight: 600;
         display: flex;
         justify-content: center;
         align-items: center;
-        .back_content{
-          background: url("home-bg.png") no-repeat center;
-          width: percent(117, 137);
-          height: percent(81, 101);
-          @include border-r(percent(8, 117), percent(8, 87));
+        @include border-r(percent(17, 744), percent(17, 131));
+        margin-left: percent(269, 1281);
+        .title_content {
+          width: percent(652, 744);
+        }
+      }
+      .back_wrapper {
+        height: percent(131, 160);
+        width: percent(137, 1281);
+        margin-left: percent(81, 1281);
+        display: flex;
+        align-items: center;
+        .back_home {
+          width: 100%;
+          height: percent(101, 131);
+          background-color: #ffffff;
+          @include border-r(percent(15, 137), percent(15, 101));
+          font-size: r(40);
+          font-weight: 700;
+          cursor: pointer;
           display: flex;
           justify-content: center;
           align-items: center;
+          .back_content {
+            background: url("home-bg.png") no-repeat center;
+            width: percent(117, 137);
+            height: percent(81, 101);
+            @include border-r(percent(8, 117), percent(8, 87));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+
+    }
+    .main {
+      height: percent(621, 865);
+      width: 100%;
+      display: flex;
+      .main_left{
+        width: percent(668, 1281);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .left_top{
+          width: percent(548, 668);
+          height: percent(336, 621);
+          background-color: deeppink;
+        }
+        .left_bottom {
+          width: 100%;
+          height: percent(154, 621);
+          background-color: pink;
+        }
+      }
+      .main_right{
+        width: percent(613, 1281);
+        height: 100%;
+        .right_top{
+          width: 100%;
+          height: percent(243, 621);
+          background-color: pink;
+        }
+        .right_bottom{
+          width: 100%;
+          height: percent(378, 621);
+          background: url("table.png") no-repeat center;
         }
       }
     }
-
-  }
-  .main {
-    flex: 598;
-    width: 100%;
-  }
-  .footer {
-    flex: 107;
-    background-color: #99b4bf;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    color: #ffffff;
-    font-size: r(38);
-    justify-content: space-between;
-    text-align: center;
-    .footer_guide{
+    .footer {
+      background-color: #99b4bf;
+      width: 100%;
+      height: percent(107, 865);
       display: flex;
-      justify-content: center;
       align-items: center;
-      background-color: #ffffff;
-      cursor: pointer;
-      .guide_content{
+      color: #ffffff;
+      font-size: r(38);
+      justify-content: space-between;
+      text-align: center;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+      display: none;
+      .footer_guide {
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        cursor: pointer;
+        .guide_content {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
       }
-    }
-    .previous{
-      width: percent(210, 1281);
-      height: percent(81, 107);
-      @include border-r(percent(6, 210), percent(6, 81));
-      margin-left: percent(30);
-      .prev_content{
-        width: percent(190, 210);
-        height: percent(61, 81);
-        background: url("prev.png") no-repeat center;
+      .previous {
+        width: percent(210, 1281);
+        height: percent(81, 107);
+        @include border-r(percent(6, 210), percent(6, 81));
+        margin-left: percent(30);
+        .prev_content {
+          width: percent(190, 210);
+          height: percent(61, 81);
+          background: url("prev.png") no-repeat center;
+        }
       }
-    }
-    .replay{
-      width: percent(197, 1281);
-      height: percent(81, 107);
-      @include border-r(percent(6, 197), percent(6, 81));
-      margin-left: percent(9);
-      .replay_content{
-        width: percent(190, 197);
-        height: percent(61, 81);
-        background: url("replay.png") no-repeat center;
+      .replay {
+        width: percent(197, 1281);
+        height: percent(81, 107);
+        @include border-r(percent(6, 197), percent(6, 81));
+        margin-left: percent(9);
+        .replay_content {
+          width: percent(190, 197);
+          height: percent(61, 81);
+          background: url("replay.png") no-repeat center;
+        }
       }
-    }
-    .remind_click{
-      width: percent(295);
-      font-size: r(34);
-      margin-left: percent(287);
-    }
-    .triangle{
-      width: percent(19);
-      height: percent(37, 107);
-      background: url("triangle.png") no-repeat center;
-    }
-    .next{
-      width: percent(188, 1281);
-      height: percent(81, 107);
-      @include border-r(percent(6, 188), percent(6, 81));
-      margin-right: percent(32);
-      .next_content{
-        width: percent(168, 188);
-        height: percent(61, 81);
-        background: url("next.png") no-repeat center;
+      .remind_click {
+        width: percent(295);
+        font-size: r(34);
+        margin-left: percent(287);
+      }
+      .triangle {
+        width: percent(19);
+        height: percent(37, 107);
+        background: url("triangle.png") no-repeat center;
+      }
+      .next {
+        width: percent(188, 1281);
+        height: percent(81, 107);
+        @include border-r(percent(6, 188), percent(6, 81));
+        margin-right: percent(32);
+        .next_content {
+          width: percent(168, 188);
+          height: percent(61, 81);
+          background: url("next.png") no-repeat center;
+        }
       }
     }
   }
+
 }
