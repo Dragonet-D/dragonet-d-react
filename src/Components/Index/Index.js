@@ -12,15 +12,18 @@ class Index extends Component {
   }
 
   methodClick(index) {
-    console.log(index)
+    if (index === 1) {
+      this.setState({
+        methodStatus: false
+      })
+    }
   }
 
   render() {
-    let status = this.state.methodStatus
     return (
       <div className="page_wrapper">
         {
-          status ? <div className="page_content">
+          this.state.methodStatus ? <div className="page_content">
             <img src={bg} alt=""/>
             <div className="remind">
               <header className="header">
