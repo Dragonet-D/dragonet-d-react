@@ -20,13 +20,16 @@
       width: percent(744, 1281);
       height: percent(131, 160);
       background-color: $back-43689e;
-      font-size: 1.8em;
+      font-size: r(26);
+      font-weight: 600;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       @include border-r(percent(17, 744), percent(17, 131));
       margin-left: percent(269, 1281);
+      .title_content{
+        width: percent(652, 744);
+      }
     }
     .back_wrapper{
       height: percent(131, 160);
@@ -39,14 +42,14 @@
         height: percent(101, 131);
         background-color: #ffffff;
         @include border-r(percent(15, 137), percent(15, 101));
-        font-size: 1.8em;
+        font-size: r(40);
         font-weight: 700;
         cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
         .back_content{
-          background-color: red;
+          background: url("home-bg.png") no-repeat center;
           width: percent(117, 137);
           height: percent(81, 101);
           @include border-r(percent(8, 117), percent(8, 87));
@@ -64,6 +67,68 @@
   }
   .footer {
     flex: 107;
+    background-color: #99b4bf;
     width: 100%;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: r(38);
+    justify-content: space-between;
+    text-align: center;
+    .footer_guide{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      cursor: pointer;
+      .guide_content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .previous{
+      width: percent(210, 1281);
+      height: percent(81, 107);
+      @include border-r(percent(6, 210), percent(6, 81));
+      margin-left: percent(30);
+      .prev_content{
+        width: percent(190, 210);
+        height: percent(61, 81);
+        background: url("prev.png") no-repeat center;
+      }
+    }
+    .replay{
+      width: percent(197, 1281);
+      height: percent(81, 107);
+      @include border-r(percent(6, 197), percent(6, 81));
+      margin-left: percent(9);
+      .replay_content{
+        width: percent(190, 197);
+        height: percent(61, 81);
+        background: url("replay.png") no-repeat center;
+      }
+    }
+    .remind_click{
+      width: percent(295);
+      font-size: r(34);
+      margin-left: percent(287);
+    }
+    .triangle{
+      width: percent(19);
+      height: percent(37, 107);
+      background: url("triangle.png") no-repeat center;
+    }
+    .next{
+      width: percent(188, 1281);
+      height: percent(81, 107);
+      @include border-r(percent(6, 188), percent(6, 81));
+      margin-right: percent(32);
+      .next_content{
+        width: percent(168, 188);
+        height: percent(61, 81);
+        background: url("next.png") no-repeat center;
+      }
+    }
   }
 }

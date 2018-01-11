@@ -1,3 +1,7 @@
 @function percent($px, $sum: 1281) {
   @return $px / $sum * 100%
 }
+
+@function r($px, $sum: 50) {
+  @return $px / $sum * 1rem
+}
