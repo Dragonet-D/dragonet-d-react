@@ -1,71 +1,99 @@
 import React, {Component} from 'react'
 import bg from './bg.png'
 import './index.scss'
+import MethHeader from './../MethHeader/MethHeader'
+import MethFooter from './../MethFooter/MethFooter'
+import MethodOneTwo from './../Method-1-2/MethodOneTwo'
+
 
 class MthOneOne extends Component {
   constructor(props) {
     super(props)
-    this.goHome = this.goHome.bind(this)
+    this.goNextPage = this.goNextPage.bind(this)
+    this.state = {
+      headerRemind: 'Comparing the chromatogram of the unknown mixture with those of known substances',
+      goStatus: true
+    }
   }
 
-  goHome() {
-    window.location.reload()
+  goNextPage() {
+    this.setState({
+      goStatus: false
+    })
   }
 
   render() {
     return (
-      <div className="page_content">
-        <img src={bg} alt="bg"/>
-        <div className="remind_1_1">
-          <div className="remind_content">
-            <header className="header">
-              <div className="title">
-                <h2 className="title_content">Comparing the chromatogram of the unknown mixture with those of known
-                  substances</h2>
-              </div>
-              <div className="back_wrapper">
-                <div
-                  onClick={this.goHome}
-                  className="back_home"
-                >
-                  <div className="back_content">Home</div>
-                </div>
-              </div>
-            </header>
-            <main className="main">
-              <div className="main_left">
-                <div className="left_top">
+      <div className="page_wrapper">
+        {
+          this.state.goStatus ? <div className="page_content">
+            <img src={bg} alt="bg"/>
+            <div className="remind_1_1">
+              <div className="remind_content">
+                {
+                  <MethHeader headerRemind={this.state.headerRemind}/>
+                }
+                <main className="main">
+                  <div className="main_left">
+                    <div className="left_top">
+                      <div className="bottom_show">
+                        <div className="spots">
+                          <div className="black_spot spot"/>
+                          <div className="orange_spot spot"/>
+                          <div className="blue_spot spot"/>
+                          <div className="red_spot spot"/>
+                        </div>
+                        <div className="substances">
+                          <div className="unknown sub">
+                            Unknown <br/> Mixture
+                          </div>
+                          <div className="sub_a sub">
+                            Substance <br/> A
+                          </div>
+                          <div className="sub_b sub">
+                            Substance <br/> B
+                          </div>
+                          <div className="sub_c sub">
+                            Substance <br/> C
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="left_bottom">
+                  <span>The mixture is suspected to <br/>
+contain A, B, or C.</span>
+                      <span style={{display: 'none'}}>Create a paper chromatogram of the <br/>unknown mixture, together with A, B and C.</span>
+                    </div>
+                  </div>
+                  <div className="main_right">
+                    <div className="right_top">
+                      <h2 className="title">Known substances</h2>
+                      <div className="beakers">
+                        <div className="beaker_a beaker">
+                          <div className="choose_a choose">A</div>
+                        </div>
+                        <div className="beaker_b beaker">
+                          <div className="choose_b choose">B</div>
+                        </div>
+                        <div className="beaker_c beaker">
+                          <div className="choose_c choose">C</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="right_bottom">
 
-                </div>
-                <div className="left_bottom">
-
-                </div>
+                    </div>
+                  </div>
+                </main>
               </div>
-              <div className="main_right">
-                <div className="right_top">
-
-                </div>
-                <div className="right_bottom">
-
-                </div>
-              </div>
-            </main>
-            <footer className="footer">
-              <div className="previous footer_guide">
-                <div className="prev_content guide_content">Previous</div>
-              </div>
-              <div className="replay footer_guide">
-                <div className="replay_content guide_content">Replay</div>
-              </div>
-              <div className="remind_click">Click on the Next button to see the chromatogram</div>
-              <div className="triangle"/>
-              <div className="next footer_guide">
-                <div className="next_content guide_content">Next</div>
-              </div>
-            </footer>
-          </div>
-        </div>
+              {
+                <MethFooter goNextPage={this.goNextPage}/>
+              }
+            </div>
+          </div> : <MethodOneTwo/>
+        }
       </div>
+
     )
   }
 }

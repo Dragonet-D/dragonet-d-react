@@ -39,11 +39,11 @@
       width: percent(310);
       height: percent(274, 284);
       @include border-r(percent(6, 310), percent(6, 274));
-      background-color: #ffffff;
+      background-color: $back-fff;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: #ffffff;
+      color: $font-fff;
       cursor: pointer;
       .method_content {
         @include border-r(percent(6, 297), percent(6, 260));

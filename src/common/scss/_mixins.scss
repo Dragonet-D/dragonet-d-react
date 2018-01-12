@@ -4,3 +4,26 @@
   border-top-right-radius: $x $y;
   border-bottom-right-radius: $x $y;
 }
+
+%flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%flex-column-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+%flex-center-end{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+%flex-center-start{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}

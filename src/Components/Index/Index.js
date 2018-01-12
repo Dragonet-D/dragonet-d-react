@@ -7,14 +7,14 @@ class Index extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      methodStatus: true
+      methodStatus: 1
     }
   }
 
   methodClick(index) {
-    if (index === 1) {
+    if (index === 2) {
       this.setState({
-        methodStatus: false
+        methodStatus: 2
       })
     }
   }
@@ -23,7 +23,7 @@ class Index extends Component {
     return (
       <div className="page_wrapper">
         {
-          0 ? <div className="page_content">
+          this.state.methodStatus === 1 ? <div className="page_content">
             <img src={bg} alt=""/>
             <div className="remind">
               <header className="header">
@@ -32,7 +32,7 @@ class Index extends Component {
               <main className="main">
                 <section
                   className="method_1 method"
-                  onClick={this.methodClick.bind(this, 1)}
+                  onClick={this.methodClick.bind(this, 2)}
                 >
                   <div className="method_content">
                     <h2 className="title">Method 1</h2>
@@ -40,7 +40,7 @@ class Index extends Component {
                   </div>
                 </section>
                 <section
-                  onClick={this.methodClick.bind(this, 2)}
+                  onClick={this.methodClick.bind(this, 3)}
                   className="method_2 method"
                 >
                   <div className="method_content">
@@ -50,7 +50,7 @@ class Index extends Component {
                 </section>
               </main>
             </div>
-          </div> : <MthOneOne/>
+          </div> : this.state.methodStatus === 2 ? <MthOneOne/> : ''
         }
       </div>
     )

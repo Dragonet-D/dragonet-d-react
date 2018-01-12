@@ -1,0 +1,129 @@
+@import "./../../common/scss/pure";
+
+.remind_1_3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  .remind_content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .main {
+      height: percent(705, 865);
+      width: 100%;
+      .main_top {
+        height: percent(392, 705);
+        width: 100%;
+        @extend %flex-center-end;
+        .box {
+          width: percent(549);
+          box-sizing: border-box;
+          height: percent(335, 392);
+          border: 5px solid $back-e6e7e8;
+          background-color: $back-fff;
+          position: relative;
+          .box_top {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: percent(250, 335);
+            background: url("pots.png") no-repeat center;
+          }
+          .box_bottom {
+            width: 100%;
+            position: absolute;
+            height: percent(80, 335);
+            border-top: 5px solid $back-ccc;
+            bottom: 0;
+            .spots {
+              position: absolute;
+              width: 100%;
+              height: percent(22, 76);
+              left: 0;
+              top: percent(-15, 81);
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+              .spot {
+                width: percent(26, 668);
+                height: 100%;
+                border-radius: 50%;
+              }
+              .black_spot {
+                background-color: $back-000;
+              }
+              .orange_spot {
+                background-color: $back-e2964a;
+              }
+              .blue_spot {
+                background-color: $back-7477ec;
+              }
+              .red_spot {
+                background-color: $back-ff0000;
+              }
+            }
+            .substances {
+              height: 100%;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+              text-align: center;
+              font-size: r(30);
+              color: $font-2b3c49;
+              .sub {
+                margin-left: percent(30);
+              }
+            }
+          }
+        }
+      }
+      .main_bottom {
+        width: 100%;
+        height: percent(144, 705);
+        .title {
+          width: 100%;
+          height: percent(77, 144);
+          color: $font-2b3c49;
+          font-size: r(40);
+          @extend %flex-center-center;
+        }
+        .clicks {
+          width: 100%;
+          height: percent(67, 144);
+          @extend %flex-center-center;
+          .click {
+            height: 100%;
+            background-color: $back-fff;
+            width: percent(67, 1281);
+            @include border-r(percent(6, 67), percent(6, 67));
+            @extend %flex-center-center;
+            cursor: pointer;
+            .click_content{
+              @extend %flex-center-center;
+              width: percent(55, 67);
+              height: percent(55, 67);
+              background-color: $back-43689e;
+              color: $font-fff;
+              font-size: r(44);
+              @include border-r(percent(3, 55), percent(3, 55));
+            }
+          }
+          .click_b{
+            margin-left: percent(63, 1281);
+          }
+          .click_c{
+            margin-left: percent(63, 1281);
+          }
+        }
+      }
+    }
+  }
+}
