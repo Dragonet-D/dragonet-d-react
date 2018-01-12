@@ -13,7 +13,9 @@ class MethodOneThree extends Component {
       initRemind: 'The unknown mixture has separated into its coloured components.',
       afterRemind: 'How many components did the unknown mixture separate into?',
       bigCircle: false,
-      smallCircle: false
+      smallCircle: false,
+      remindClick: false,
+      triangle: false
     }
   }
 
@@ -27,8 +29,50 @@ class MethodOneThree extends Component {
               {
                 <MethHeader headerRemind={this.state.headerRemind}/>
               }
+              <main className="main">
+                <section className="main_top">
+                  <div className="box">
+                    <div className="box_top">
+                      <div className="box_top_content">
+                        <div className="mask"/>
+                      </div>
+                    </div>
+                    <div className="box_bottom">
+                      <div className="substances">
+                        <div className="unknown sub">
+                          Unknown <br/> Mixture
+                        </div>
+                        <div className="sub_a sub">
+                          Substance <br/> A
+                        </div>
+                        <div className="sub_b sub">
+                          Substance <br/> B
+                        </div>
+                        <div className="sub_c sub">
+                          Substance <br/> C
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section className="main_bottom">
+                  <h2 className="title">Click on the names of the substances that the mixture contains.</h2>
+                  <div className="clicks">
+                    <div className="click_a click">
+                      <div className="click_content">A</div>
+                    </div>
+                    <div className="click_b click">
+                      <div className="click_content">B</div>
+                    </div>
+                    <div className="click_c click">
+                      <div className="click_content">C</div>
+                    </div>
+                  </div>
+                </section>
+              </main>
               {
-               this.state.footerStatus ? <MethFooter remindClick={true}/> : ''
+                this.state.footerStatus ?
+                  <MethFooter remindClick={this.state.remindClick} triangle={this.state.triangle}/> : ''
               }
             </div>
           </div>

@@ -15,7 +15,10 @@ class MethFooter extends Component {
           className="remind_click"
           style={{visibility: this.props.remindClick ? 'static' : 'hidden'}}
         >Click on the Next button to see the chromatogram</div>
-        <div className="triangle"/>
+        <div
+          className="triangle"
+          style={{visibility: this.props.triangle ? 'static' : 'hidden'}}
+        />
         <div className="next footer_guide">
           <div className="next_content guide_content">Next</div>
         </div>
