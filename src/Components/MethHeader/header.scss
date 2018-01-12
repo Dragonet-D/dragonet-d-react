@@ -1,0 +1,53 @@
+@import "./../../common/scss/pure";
+.meth_header {
+  color: $font-fff;
+  height: percent(160, 865);
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  text-align: center;
+  .title {
+    width: percent(744, 1281);
+    height: percent(131, 160);
+    background-color: $back-43689e;
+    font-size: r(26);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include border-r(percent(17, 744), percent(17, 131));
+    margin-left: percent(269, 1281);
+    .title_content {
+      width: percent(652, 744);
+    }
+  }
+  .back_wrapper {
+    height: percent(131, 160);
+    width: percent(137, 1281);
+    margin-left: percent(81, 1281);
+    display: flex;
+    align-items: center;
+    .back_home {
+      width: 100%;
+      height: percent(101, 131);
+      background-color: #ffffff;
+      @include border-r(percent(15, 137), percent(15, 101));
+      font-size: r(40);
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .back_content {
+        background: url("home-bg.png") no-repeat center;
+        width: percent(117, 137);
+        height: percent(81, 101);
+        @include border-r(percent(8, 117), percent(8, 87));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+}

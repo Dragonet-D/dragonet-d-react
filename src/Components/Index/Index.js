@@ -23,7 +23,7 @@ class Index extends Component {
     return (
       <div className="page_wrapper">
         {
-          this.state.methodStatus ? <div className="page_content">
+          0 ? <div className="page_content">
             <img src={bg} alt=""/>
             <div className="remind">
               <header className="header">

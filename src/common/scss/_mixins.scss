@@ -4,3 +4,9 @@
   border-top-right-radius: $x $y;
   border-bottom-right-radius: $x $y;
 }
+
+%flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

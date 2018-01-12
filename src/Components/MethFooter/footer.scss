@@ -1,0 +1,73 @@
+@import "./../../common/scss/pure";
+.meth_footer {
+  background-color: #99b4bf;
+  width: 100%;
+  height: percent(107, 865);
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: r(38);
+  justify-content: space-between;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  //display: none;
+  .footer_guide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    cursor: pointer;
+    .guide_content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .previous {
+    width: percent(210, 1281);
+    height: percent(81, 107);
+    @include border-r(percent(6, 210), percent(6, 81));
+    margin-left: percent(30);
+    .prev_content {
+      width: percent(190, 210);
+      height: percent(61, 81);
+      background: url("prev.png") no-repeat center;
+    }
+  }
+  .replay {
+    width: percent(197, 1281);
+    height: percent(81, 107);
+    @include border-r(percent(6, 197), percent(6, 81));
+    margin-left: percent(9);
+    .replay_content {
+      width: percent(190, 197);
+      height: percent(61, 81);
+      background: url("replay.png") no-repeat center;
+    }
+  }
+  .remind_click {
+    width: percent(295);
+    font-size: r(34);
+    margin-left: percent(287);
+  }
+  .triangle {
+    width: percent(19);
+    height: percent(37, 107);
+    background: url("triangle.png") no-repeat center;
+  }
+  .next {
+    width: percent(188, 1281);
+    height: percent(81, 107);
+    @include border-r(percent(6, 188), percent(6, 81));
+    margin-right: percent(32);
+    .next_content {
+      width: percent(168, 188);
+      height: percent(61, 81);
+      background: url("next.png") no-repeat center;
+    }
+  }
+}
+
