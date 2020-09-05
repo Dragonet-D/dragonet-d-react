@@ -1,7 +1,14 @@
 import React, { FC } from 'react'
+import Universe from '@/components/universe'
+import styles from './baseLayout.scss'
 
 const BaseLayout: FC = ({ children }) => {
-  return <div>{children}</div>
+  return (
+    <div className={styles.wrapper}>
+      <Universe />
+      <div className={styles.content}>{children}</div>
+    </div>
+  )
 }
 
 export default BaseLayout
