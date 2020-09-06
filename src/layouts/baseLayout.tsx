@@ -6,7 +6,9 @@ const BaseLayout: FC = ({ children }) => {
   return (
     <div className={styles.wrapper}>
       <Universe />
-      <div className={styles.content}>{children}</div>
+      <div className={styles.content}>
+        <main className={styles.main}>{children}</main>
+      </div>
     </div>
   )
 }

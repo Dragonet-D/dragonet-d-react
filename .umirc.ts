@@ -17,7 +17,7 @@ export default defineConfig({
         {
           exact: false,
           path: '/index',
-          component: '@/pages/index',
+          component: '@/pages/home/cv',
           title: 'CV',
         },
       ],
