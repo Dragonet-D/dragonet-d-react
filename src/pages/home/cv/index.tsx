@@ -9,7 +9,10 @@ import styles from './index.scss'
 const CV: FC = () => {
   return (
     <div className={styles.wrapper}>
-      <Card variant="outlined">
+      <Card
+        variant="outlined"
+        style={{ color: '#fff', backgroundColor: 'transparent' }}
+      >
         <CardActionArea disabled>
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
