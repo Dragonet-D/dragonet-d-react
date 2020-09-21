@@ -15,8 +15,13 @@ export default defineConfig({
       component: '@/layouts/index',
       routes: [
         {
-          exact: false,
           path: '/index',
+          component: '@/pages/home',
+          title: 'index',
+        },
+        {
+          exact: false,
+          path: '/cv',
           component: '@/pages/home/cv',
           title: 'CV',
         },

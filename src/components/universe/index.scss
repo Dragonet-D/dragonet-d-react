@@ -14,20 +14,27 @@
    Pluto : ~90 580 days (~248 years)
  */
 
+.wrapper {
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #1c2837 0%, #050608 100%);
+  background-attachment: fixed;
+}
+
 $year-in-second: 30; // 1 Earth year = 30 sec
 
 @function revolution($pl-year-in-days) {
-  @return $pl-year-in-days * $year-in-second / 365.2563 + s //Earth reference
+  @return $pl-year-in-days * $year-in-second / 365.2563 + s //Earth reference;
 }
 
 @function alphaRandom() {
-  @return random(1000)*.001;
+  @return random(1000) * 0.001;
 }
 
-@function stars($s, $max-area, $min-area : 0, $star-size : 0) {
-  $stars: #{$min-area + random($max-area)}px #{$min-area + random($max-area)}px 0 #{$star-size}px rgba(255, 255, 255, alphaRandom());
+@function stars($s, $max-area, $min-area: 0, $star-size: 0) {
+  $stars: #{$min-area + random($max-area)}px #{$min-area + random($max-area)}px
+    0 #{$star-size}px rgba(255, 255, 255, alphaRandom());
   @for $i from 1 to $s {
-    $stars: '#{$stars} , #{$min-area + random($max-area)}px #{$min-area + random($max-area)}px 0 #{$star-size}px rgba(255,255,255, #{alphaRandom()})'
+    $stars: '#{$stars} , #{$min-area + random($max-area)}px #{$min-area + random($max-area)}px 0 #{$star-size}px rgba(255,255,255, #{alphaRandom()})';
   }
   @return unquote($stars);
 }
@@ -55,7 +62,9 @@ $pluto-pl: 3px;
 $asteroids-belt-orb: 300px;
 $asteroids-belt-pl: 210px;
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -63,7 +72,7 @@ $asteroids-belt-pl: 210px;
 
 .solar-syst {
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     height: 2px;
     width: 2px;
@@ -91,7 +100,7 @@ $asteroids-belt-pl: 210px;
       &:before {
         left: 50%;
         border-radius: 100px;
-        content: "";
+        content: '';
         position: absolute;
       }
     }
@@ -105,7 +114,13 @@ $asteroids-belt-pl: 210px;
 }
 
 .sun {
-  background: radial-gradient(ellipse at center, #ffd000 1%, #f9b700 39%, #f9b700 39%, #e06317 100%);
+  background: radial-gradient(
+    ellipse at center,
+    #ffd000 1%,
+    #f9b700 39%,
+    #f9b700 39%,
+    #e06317 100%
+  );
   height: $sun;
   width: $sun;
   margin-top: -$sun / 2;
@@ -114,7 +129,8 @@ $asteroids-belt-pl: 210px;
   border: 0 !important;
   background-position: -28px -103px;
   background-size: 175%;
-  box-shadow: 0 0 10px 2px rgba(255, 107, 0, 0.4), 0 0 22px 11px rgba(255, 203, 0, 0.13);
+  box-shadow: 0 0 10px 2px rgba(255, 107, 0, 0.4),
+    0 0 22px 11px rgba(255, 203, 0, 0.13);
 }
 
 .mercury {
@@ -143,7 +159,7 @@ $asteroids-belt-pl: 210px;
   &:before {
     height: $venus-pl;
     width: $venus-pl;
-    background: #BEB768;
+    background: #beb768;
     margin-top: -$venus-pl / 2;
     margin-left: -$venus-pl / 2;
   }
@@ -166,7 +182,7 @@ $asteroids-belt-pl: 210px;
 
   &:after {
     position: absolute;
-    content: "";
+    content: '';
     height: 18px;
     width: 18px;
     left: 50%;
@@ -228,7 +244,7 @@ $asteroids-belt-pl: 210px;
 
   &:after {
     position: absolute;
-    content: "";
+    content: '';
     height: 2.34%;
     width: 4.676%;
     left: 50%;
@@ -277,7 +293,7 @@ $asteroids-belt-pl: 210px;
 }
 
 .asteroids-belt {
-  opacity: .7;
+  opacity: 0.7;
   border-color: transparent !important;
   height: $asteroids-belt-orb;
   width: $asteroids-belt-orb;
@@ -325,9 +341,9 @@ $asteroids-belt-pl: 210px;
 
 @keyframes orb {
   from {
-    transform: rotate(0deg)
+    transform: rotate(0deg);
   }
   to {
-    transform: rotate(-360deg)
+    transform: rotate(-360deg);
   }
 }
