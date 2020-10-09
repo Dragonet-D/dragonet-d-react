@@ -34,4 +34,11 @@ export default defineConfig({
       ],
     },
   ],
+  proxy: {
+    '/api': {
+      target: 'http://dragonet-d.cn:1010/',
+      changeOrigin: true,
+      pathRewrite: { '^/api': '' },
+    },
+  },
 })
