@@ -25,6 +25,12 @@ export default defineConfig({
           component: '@/pages/home/cv',
           title: 'CV',
         },
+        {
+          exact: false,
+          path: '/note',
+          component: '@/pages/note',
+          title: '别人的文章',
+        },
       ],
     },
   ],
