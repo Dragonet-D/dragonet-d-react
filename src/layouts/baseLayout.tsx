@@ -38,6 +38,9 @@ const BaseLayout: FC = ({ children }) => {
         onClose={handleClose}
       >
         <MenuItem onClick={handleClose}>
+          <NavLink to="/">Home</NavLink>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
           <NavLink to="/note">Note</NavLink>
         </MenuItem>
       </Menu>
