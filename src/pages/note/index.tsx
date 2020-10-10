@@ -12,10 +12,8 @@ import { getList } from './service'
 const Note = () => {
   const { data } = useRequest(getList, {
     initialData: [],
-    formatResult: res => res.data,
+    formatResult: res => res.data || [],
   })
-
-  console.log(data)
 
   return (
     <TableContainer>
