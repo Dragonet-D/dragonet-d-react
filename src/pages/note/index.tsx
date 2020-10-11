@@ -26,7 +26,7 @@ const Note = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {data.map(i => (
+          {data.map((i: any) => (
             <TableRow key={i.id}>
               <TableCell component="th" scope="row">
                 {i.title}
