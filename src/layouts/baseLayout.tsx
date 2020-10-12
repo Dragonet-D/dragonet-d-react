@@ -40,9 +40,9 @@ const BaseLayout: FC = ({ children }) => {
         <MenuItem onClick={handleClose}>
           <NavLink to="/">Home</NavLink>
         </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <NavLink to="/note">Note</NavLink>
-        </MenuItem>
+        {/*<MenuItem onClick={handleClose}>*/}
+        {/*  <NavLink to="/note">Note</NavLink>*/}
+        {/*</MenuItem>*/}
       </Menu>
       <main className={styles.main}>{children}</main>
     </div>

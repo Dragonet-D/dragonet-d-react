@@ -8,14 +8,14 @@ import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
-import { getList, addItem } from './service'
+import { getList, addItem, del } from './service'
 import styles from './index.scss'
 
 const Note = () => {
   const [title, setTitle] = useState('')
   const [link, setLink] = useState('')
 
-  const { data } = useRequest(getList, {
+  const { data, run } = useRequest(getList, {
     initialData: [],
     formatResult: res => res.data || [],
   })
@@ -23,6 +23,19 @@ const Note = () => {
   // 添加
   const { run: addItemRun } = useRequest(addItem, {
     manual: true,
+    onSuccess: res => {
+      run()
+      setLink('')
+      setTitle('')
+    },
+  })
+
+  // 删除
+  const { run: delRun } = useRequest(del, {
+    manual: true,
+    onSuccess: res => {
+      run()
+    },
   })
 
   const handleAdd = () => {
@@ -46,7 +59,12 @@ const Note = () => {
           className={styles.link}
           label="链接"
         />
-        <Button onClick={handleAdd} color="primary" variant="contained">
+        <Button
+          disabled={!title || !link}
+          onClick={handleAdd}
+          color="primary"
+          variant="contained"
+        >
           确定
         </Button>
       </div>
@@ -70,7 +88,12 @@ const Note = () => {
                 </TableCell>
                 <TableCell>
                   <Button color="primary">编辑</Button>
-                  <Button color="secondary">删除</Button>
+                  <Button
+                    onClick={() => delRun({ id: i.id })}
+                    color="secondary"
+                  >
+                    删除
+                  </Button>
                 </TableCell>
               </TableRow>
             ))}

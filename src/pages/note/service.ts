@@ -11,6 +11,17 @@ export function getList() {
 export function addItem(params: { title: string; url: string }) {
   return request('api/note/add', {
     method: 'post',
+    body: JSON.stringify(params),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+}
+
+// 删除
+export function del(params: { id: string | number }) {
+  return request('/api/note/del', {
+    method: 'delete',
     params,
   })
 }
