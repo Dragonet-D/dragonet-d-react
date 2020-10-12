@@ -84,7 +84,9 @@ const Note = () => {
                   {i.title}
                 </TableCell>
                 <TableCell component="th" scope="row">
-                  <NavLink to={i.url}>{i.url}</NavLink>
+                  <a target="_blank" href={i.url}>
+                    {i.url}
+                  </a>
                 </TableCell>
                 <TableCell>
                   <Button color="primary">编辑</Button>
