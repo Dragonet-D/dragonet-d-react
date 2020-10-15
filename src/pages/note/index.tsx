@@ -50,6 +50,7 @@ const Note = () => {
       <div className={styles.header}>
         <TextField
           value={title}
+          className={styles.link}
           onChange={e => setTitle(e.target.value)}
           label="标题"
         />
