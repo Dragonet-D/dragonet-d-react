@@ -31,6 +31,12 @@ export default defineConfig({
           component: '@/pages/note',
           title: '别人的文章',
         },
+        {
+          exact: false,
+          path: '/markdown',
+          component: '@/pages/markdown',
+          title: 'markdown',
+        },
       ],
     },
   ],
