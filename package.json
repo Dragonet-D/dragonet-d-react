@@ -35,7 +35,8 @@
     "yorkie": "^2.0.0"
   },
   "devDependencies": {
-    "@umijs/plugin-sass": "^1.1.1"
+    "@umijs/plugin-sass": "^1.1.1",
+    "recast": "^0.20.4"
   },
   "__npminstall_done": false
 }
