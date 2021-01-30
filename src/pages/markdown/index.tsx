@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Button } from '@material-ui/core'
+import { useRequest } from 'umi'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import { test } from './service'
 import styles from './index.less'
 
 const recast = require('recast')
@@ -22,6 +24,8 @@ const Markdown = () => {
       setCount2(1)
     }
   })
+
+  useRequest(test)
 
   const renderers = {
     code: ({ language, value }) => {
