@@ -4,6 +4,8 @@ import { Button } from '@material-ui/core'
 import { useRequest } from 'umi'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import 'braft-editor/dist/index.css'
+import BraftEditor from 'braft-editor'
 import { test } from './service'
 import styles from './index.less'
 
@@ -50,7 +52,29 @@ console.log('It works!')
   }
   `
 
+  const [values, setValues] = useState(null)
+
   console.log(recast.parse(code))
+
+  const handleChange = e => {
+    setValues(e)
+    console.log(e.toHTML())
+  }
+
+  useEffect(() => {
+    setTimeout(() => {
+      setValues(
+        BraftEditor.createEditorState(`
+      <ul>
+      <li>qweqeqweqe</li>
+      <li>qweqdadsadqew</li>
+      </ul>
+      <p>qweqwqwee123</p>
+    `),
+      )
+    }, 1000)
+  }, [])
+
   return (
     <div>
       <ReactMarkdown renderers={renderers}>{markdown}</ReactMarkdown>
@@ -66,6 +90,7 @@ console.log('It works!')
       <button onClick={e => console.log(e, e.nativeEvent)}>
         test event react
       </button>
+      <BraftEditor value={values} onChange={handleChange} />
     </div>
   )
 }

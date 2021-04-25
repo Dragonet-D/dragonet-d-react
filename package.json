@@ -25,6 +25,7 @@
     "@material-ui/icons": "^4.9.1",
     "@umijs/preset-react": "1.x",
     "@umijs/test": "^3.2.19",
+    "braft-editor": "^2.3.9",
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
