@@ -42,7 +42,7 @@ const Markdown = () => {
 ~~~js
 console.log('It works!')
 ~~~
-`
+`;
 
   const code = `
   function add(a, b) {
