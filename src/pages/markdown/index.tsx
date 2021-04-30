@@ -84,9 +84,7 @@ console.log('It works!')
       </Button>
       <div>count2{count2}</div>
       <Button onClick={() => setCount2(12)}>count2</Button>
-
       <br />
-
       <button onClick={e => console.log(e, e.nativeEvent)}>
         test event react
       </button>
