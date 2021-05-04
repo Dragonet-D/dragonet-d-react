@@ -1,5 +1,4 @@
 ## Getting Started
-
 Install dependencies,
 
 ```bash
