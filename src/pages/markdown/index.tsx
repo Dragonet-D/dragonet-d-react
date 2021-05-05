@@ -93,4 +93,4 @@ console.log('It works!')
   )
 }
 
-export default Markdown
+export default Markdown;
