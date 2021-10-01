@@ -1,6 +1,9 @@
 import { defineConfig } from 'umi'
 
 export default defineConfig({
+  dynamicImport: {
+    loading: '@/components/Loading/index',
+  },
   nodeModulesTransform: {
     type: 'none',
   },
